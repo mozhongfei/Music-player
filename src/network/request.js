@@ -6,7 +6,7 @@ import router from '../router'
 export function request(config) {
   // 1.创建axios的实例
   const instance = axios.create({
-    baseURL: 'http://r3inbowari.top:3000',
+    baseURL: 'http://8.134.217.208:3000',
     timeout: 10000,
     // withCredentials: true,
   })

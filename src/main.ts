@@ -5,6 +5,20 @@ import store from './store'
 Vue.config.productionTip = false
 
 import FastClick from 'fastclick'
+FastClick.prototype.focus = (targetElement: any) => {
+  let length
+  if (
+    targetElement.setSelectionRange &&
+    targetElement.type.indexOf("date") !== 0 &&
+    targetElement.type !== "time" &&
+    targetElement.type !== "month"
+  ) {
+    length = targetElement.value.length
+    targetElement.focus()
+    targetElement.setSelectionRange(length, length)
+  }
+}
+
 FastClick.attach(document.body)
 
 import 'vant/lib/index.css';

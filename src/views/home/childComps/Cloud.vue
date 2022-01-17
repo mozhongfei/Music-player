@@ -22,6 +22,7 @@ export default {
   },
   created() {
     this.cloud = this.$store.state.SLIDE_SINGLE_SONG;
+    this.cloud = this.cloud?this.cloud:{}
   },
   methods: {},
   components: {
